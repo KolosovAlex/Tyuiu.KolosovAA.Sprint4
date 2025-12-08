@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint4;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint4;
 
 namespace Tyuiu.KolosovAA.Sprint4.Task6.V13.Lib
 {
@@ -6,17 +7,7 @@ namespace Tyuiu.KolosovAA.Sprint4.Task6.V13.Lib
     {
         public int Calculate(string[] array)
         {
-            int count = 0;
-
-
-            Array.ForEach(array, element =>
-            {
-                if (element.Length > 4)
-                {
-                    count++;
-                }
-            });
-
+            int count = array.Count(n => n.Length > 4);
             return count;
         }
     }
